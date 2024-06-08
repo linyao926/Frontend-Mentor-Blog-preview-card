@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "Figtree";
+    src: url(../fonts/Figtree-VariableFont_wght.ttf);
+}
+
+:root {
+    --primary-color: hsl(47, 88%, 63%);
+    --white: #fff;
+    --grey: hsl(0, 0%, 50%);
+    --black: hsl(0, 0%, 7%);
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Figtree", sans-serif;
+    background-color: var(--primary-color);
+    color: var(--black);
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--white);
+    width: 384px;
+    border-radius: 20px;
+    padding: 24px;
+}
+
+.article-illustration {
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card-content {
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.category {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-weight: 700;
+    width: max-content;
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.publish-date {
+    font-size: 14px;
+}
+
+.title {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.title:hover {
+    color: var(--primary-color);
+    transition: all 0.4s;
+}
+
+.description {
+    color: var(--grey);
+    line-height: 24px;
+}
+
+.card-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.author-name {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.attribution { 
+    font-size: 13px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media only screen and (max-width: 433px) {
+    .container {
+        padding: 12px;
+    }
+
+    .card {
+        min-width: 327px;
+        width: 100%;
+        position: relative;
+    }
+
+    .category {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .publish-date {
+        font-size: 12px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .description {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
